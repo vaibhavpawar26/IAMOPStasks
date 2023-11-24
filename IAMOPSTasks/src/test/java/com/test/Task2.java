@@ -21,7 +21,8 @@ public class Task2 {
 
 		Object[][] data = new Object[][] {
 
-				{ "tomsmith1", "SuperSecretPassword" }, { "tomsmith2", "SuperSecretPassword" },
+				{ "tomsmith1", "SuperSecretPassword" }, 
+				{ "tomsmith2", "SuperSecretPassword" },
 				{ "tomsmith", "SuperSecretPassword!" } };
 
 		return data;
@@ -33,6 +34,7 @@ public class Task2 {
 	public void setUp() {
 		driver = new ChromeDriver();
 		driver.get(url);
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	

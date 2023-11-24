@@ -23,6 +23,7 @@ public class Task1 {
 	public void test1() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.get(url);
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.id("username")).sendKeys(name);
 		driver.findElement(By.id("password")).sendKeys(password);
@@ -45,6 +46,9 @@ public class Task1 {
 		driver.switchTo().frame(0);
 		driver.findElement(By.xpath("//span[@id='recaptcha-anchor']")).click();
 		
+		//click submit - it is opening captcha so did not submit.
+//		driver.findElement(By.id("wpforms-submit-161")).click();
+	
 		
 	}
 
